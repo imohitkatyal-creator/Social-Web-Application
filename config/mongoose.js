@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-mongoose.connect('mongodb://localhost/Codeial_development');
+mongoose.connect('mongodb://localhost/Codieal-server');
 
 const db=mongoose.connection;
 
