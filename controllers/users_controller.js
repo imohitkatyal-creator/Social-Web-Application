@@ -1,6 +1,6 @@
 //importing model for fetching user data
 const User=require('../models/user');
-
+const passport=require('passport');
 
 
 module.exports.profile=function(req,res){
@@ -13,16 +13,24 @@ module.exports.posts=function(req,res){
 }
 //render the signup page
 module.exports.signup=function(req,res){
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }else{
     return res.render('user_signup',{
         title:'User SignUp'     
     });
+    }
 }
 
 //render the signin page
 module.exports.signin=function(req,res){
-    return res.render('user_signin',{
-        title:'User SignIn'     
-    });
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }else{
+        return res.render('user_signin',{
+            title:'User SignIn'     
+        });
+    }
 }
 
 //get the sign-up data
@@ -48,5 +56,5 @@ module.exports.create=function(req,res){
 
 //sign-in and create session for a user
 module.exports.createSession=function(req,res){
-
+ return res.redirect('/');
 }
