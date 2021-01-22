@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #EB5757;
+  height: 50px;
+  font-family: sans-serif;
+  color: white; }
+  header h2 {
+    font-size: 40px;
+    margin: 5px; }
+  header i {
+    font-weight: bold; }
+  header ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between; }
+    header ul a {
+      color: white;
+      text-decoration: none;
+      margin-right: 10px; }

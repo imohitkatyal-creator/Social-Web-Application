@@ -1,0 +1,27 @@
+header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #EB5757;
+    height: 50px;
+    font-family: sans-serif;
+    color: white;
+    h2{
+        font-size: 40px;
+        margin: 5px;
+    }
+    i{
+        // color: grey;
+        font-weight: bold;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        justify-content: space-between;
+        a{   color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    }
+}
