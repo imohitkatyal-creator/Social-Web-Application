@@ -1,9 +1,9 @@
 <header>
-    <h2><i class="fab fa-symfony"></i>Socify</h2>
+    <a href="/"><h2><i class="fab fa-symfony"></i>Socify</h2></a>
     <ul>
         <% if(locals.user){%>
             <li>
-                <a href="/users/profile"><%= user.name%></a>
+                <a href="/users/profile/<%= locals.user.id%>"><%= user.name%></a>
             </li>
             <li>
                 <a href="/users/sign-out">Sign-Out</a>

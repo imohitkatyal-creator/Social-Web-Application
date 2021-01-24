@@ -1,0 +1,25 @@
+#home-container{
+    display: flex;
+    font-family: sans-serif;
+    color:#65676B;
+    
+    
+    #textarea-css{
+    resize: none;
+    }
+    #feed-post{
+        width: 70%;
+        padding: 10px;
+        border-right:1px solid #EB5757;
+    }
+    #friend-list{
+        width: 30%;
+        padding: 10px;
+        
+        height: 100%;
+        a{
+            text-decoration: none;
+            color: #65676B;
+        }
+    }    
+}

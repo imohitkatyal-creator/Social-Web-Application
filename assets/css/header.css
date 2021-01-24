@@ -6,6 +6,9 @@ header {
   height: 50px;
   font-family: sans-serif;
   color: white; }
+  header a {
+    color: white;
+    text-decoration: none; }
   header h2 {
     font-size: 40px;
     margin: 5px; }
