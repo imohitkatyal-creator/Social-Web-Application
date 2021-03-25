@@ -19,6 +19,11 @@ const MongoStore=require('connect-mongo')(session);
 //for scss npm install node-sass-middleware
 const sassMiddleware=require('node-sass-middleware');
 
+//for flash msges npm install connect-flash
+const flash=require('connect-flash');
+// ..middleware for flash
+const customMware=require('./config/middleware');
+
 //use ejs-layouts by installing npm install express-ejs-layouts
 const expressLayouts=require('express-ejs-layouts');
 
@@ -67,6 +72,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 
+app.use(flash());
+app.use(customMware.setFlash);
 //use express router
 app.use('/',require('./routes'));
 
